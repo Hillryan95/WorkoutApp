@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		3A678AE9267CD61F0009B087 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A678AE8267CD61F0009B087 /* AppDelegate.swift */; };
-		3A678AEB267CD61F0009B087 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A678AEA267CD61F0009B087 /* SceneDelegate.swift */; };
-		3A678AED267CD61F0009B087 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A678AEC267CD61F0009B087 /* ViewController.swift */; };
-		3A678AF0267CD61F0009B087 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A678AEE267CD61F0009B087 /* Main.storyboard */; };
+		3A678AED267CD61F0009B087 /* WorkoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A678AEC267CD61F0009B087 /* WorkoutVC.swift */; };
 		3A678AF2267CD6220009B087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A678AF1267CD6220009B087 /* Assets.xcassets */; };
 		3A678AF5267CD6220009B087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A678AF3267CD6220009B087 /* LaunchScreen.storyboard */; };
+		3A678B012680F3860009B087 /* CustomColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A678B002680F3860009B087 /* CustomColours.swift */; };
+		3A678B05268216C90009B087 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A678B04268216C90009B087 /* CardView.swift */; };
+		3A678B07268217D30009B087 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A678B06268217D30009B087 /* ContainerView.swift */; };
+		3A678B09268230CF0009B087 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A678B08268230CF0009B087 /* GradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A678AE5267CD61F0009B087 /* WorkoutApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkoutApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A678AE8267CD61F0009B087 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A678AEA267CD61F0009B087 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A678AEC267CD61F0009B087 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3A678AEF267CD61F0009B087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A678AEC267CD61F0009B087 /* WorkoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutVC.swift; sourceTree = "<group>"; };
 		3A678AF1267CD6220009B087 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A678AF4267CD6220009B087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A678AF6267CD6220009B087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A678B002680F3860009B087 /* CustomColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColours.swift; sourceTree = "<group>"; };
+		3A678B04268216C90009B087 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		3A678B06268217D30009B087 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		3A678B08268230CF0009B087 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		3A678AE7267CD61F0009B087 /* WorkoutApp */ = {
 			isa = PBXGroup;
 			children = (
+				3A678AFF2680F3690009B087 /* Utilities */,
+				3A678AFC267CE3170009B087 /* Model */,
+				3A678AFD267CE31E0009B087 /* View */,
+				3A678AFE267CE3240009B087 /* Controller */,
 				3A678AE8267CD61F0009B087 /* AppDelegate.swift */,
-				3A678AEA267CD61F0009B087 /* SceneDelegate.swift */,
-				3A678AEC267CD61F0009B087 /* ViewController.swift */,
-				3A678AEE267CD61F0009B087 /* Main.storyboard */,
 				3A678AF1267CD6220009B087 /* Assets.xcassets */,
 				3A678AF3267CD6220009B087 /* LaunchScreen.storyboard */,
 				3A678AF6267CD6220009B087 /* Info.plist */,
 			);
 			path = WorkoutApp;
+			sourceTree = "<group>";
+		};
+		3A678AFC267CE3170009B087 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A678AFD267CE31E0009B087 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A678B04268216C90009B087 /* CardView.swift */,
+				3A678B06268217D30009B087 /* ContainerView.swift */,
+				3A678B08268230CF0009B087 /* GradientView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A678AFE267CE3240009B087 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3A678AEC267CD61F0009B087 /* WorkoutVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3A678AFF2680F3690009B087 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3A678B002680F3860009B087 /* CustomColours.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +164,6 @@
 			files = (
 				3A678AF5267CD6220009B087 /* LaunchScreen.storyboard in Resources */,
 				3A678AF2267CD6220009B087 /* Assets.xcassets in Resources */,
-				3A678AF0267CD61F0009B087 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +174,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A678AED267CD61F0009B087 /* ViewController.swift in Sources */,
+				3A678B07268217D30009B087 /* ContainerView.swift in Sources */,
+				3A678AED267CD61F0009B087 /* WorkoutVC.swift in Sources */,
+				3A678B09268230CF0009B087 /* GradientView.swift in Sources */,
+				3A678B012680F3860009B087 /* CustomColours.swift in Sources */,
+				3A678B05268216C90009B087 /* CardView.swift in Sources */,
 				3A678AE9267CD61F0009B087 /* AppDelegate.swift in Sources */,
-				3A678AEB267CD61F0009B087 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3A678AEE267CD61F0009B087 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A678AEF267CD61F0009B087 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3A678AF3267CD6220009B087 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,6 +321,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QLF48FFBV7;
 				INFOPLIST_FILE = WorkoutApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +329,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = RyanHill.WorkoutApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -308,6 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QLF48FFBV7;
 				INFOPLIST_FILE = WorkoutApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +349,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = RyanHill.WorkoutApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
