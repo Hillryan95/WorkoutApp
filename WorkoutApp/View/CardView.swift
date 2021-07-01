@@ -10,7 +10,9 @@ import UIKit
 
 final class CardView: UIView {
     private let containerView = ContainerView()
+    private let stackView = UIStackView()
     private let titleLabel = UILabel()
+    private let subtitleLabel = UILabel()
     private let timeLabel = UILabel()
     private let timeDescriptionLabel = UILabel()
     private let exerciseLabel = UILabel()
@@ -30,6 +32,8 @@ final class CardView: UIView {
         heightAnchor.constraint(equalToConstant: 150).isActive = true
         setupContainerView()
         setupTitleLabel()
+        setupSubtitleLabel()
+        setupStackView()
     }
     
     private func setupContainerView() {
@@ -47,22 +51,35 @@ final class CardView: UIView {
         
     }
     
+    public func setupStackView() {
+        containerView.addSubview(stackView)
+        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        let height = stackView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 4/3)
+        let centerY = stackView.centerYAnchor.constraint(equalTo: centerYAnchor)
+        let leading = stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10)
+        let trailing = stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+        NSLayoutConstraint.activate([height, centerY, leading, trailing])
+        
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+    }
+    
     public func setupTitleLabel() {
-        addSubview(titleLabel)
-        
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        let height = titleLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 1/4)
-        let leading = titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 15)
-        let trailing = titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15)
-        
-        NSLayoutConstraint.activate([height, leading, trailing])
+        stackView.addArrangedSubview(titleLabel)
+
         
         titleLabel.text = "TitleLabel"
         titleLabel.textColor = .white
-        titleLabel.shadowColor = .black.withAlphaComponent(0.4)
-        titleLabel.shadowOffset = CGSize(width: 1, height: 1)
         titleLabel.font = .boldSystemFont(ofSize: 20)
+    }
+    
+    public func setupSubtitleLabel() {
+        stackView.addArrangedSubview(subtitleLabel)
+        
+        subtitleLabel.text = "subtitleLabel"
+        subtitleLabel.textColor = .white
+        subtitleLabel.font = .boldSystemFont(ofSize: 15)
     }
     
     
